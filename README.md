@@ -1,7 +1,7 @@
 # Examples of simple-db-migrate uses
 ---
 
-There are 3 simple steps to use simple-db-migrate
+There are 4 simple steps to use simple-db-migrate
 
 ### Step 1. Installing at OS:
 
@@ -51,6 +51,19 @@ SQL_UP = """
 SQL_DOWN = """
   DELETE FROM aleatory WHERE id = 1;
 """
+```
+
+### Step 4. Executing migrations at the database
+Run the installed script inside the project folder
+
+```sh
+db-migrate
+```
+
+You can run outside of the folder passing the path of config file (but not forget to change the value of var DATABASE_MIGRATIONS_DIR at your simple-db-migrate.conf file)
+
+```sh
+db-migrate -c /opt/my_migration_project/simple-db-migrate.conf
 ```
 
 ### Extra
