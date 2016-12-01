@@ -1,10 +1,15 @@
-1. Installing at OS:
+# Examples of simple-db-migrate uses
+---
+
+There are 3 simple steps to use simple-db-migrate
+
+### Step 1. Installing at OS:
 
 ```sh
 pip install mysql-python simple-db-migrate
 ```
 
-2. Define a config file
+### Step 2. Define a config file
 
 simple-db-migrate.conf
 
@@ -17,7 +22,7 @@ DATABASE_MIGRATIONS_DIR = "./scripts"
 DATABASE_VERSION_TABLE  = "simpledbmigrate_version"
 ```
 
-3. Create SQL scripts with SQL_UP var for upgrade database and SQL_DOWN to downgrade alterations
+### Step 3. Create SQL scripts with SQL_UP var for upgrade database and SQL_DOWN to downgrade alterations
 
 - scripts/20161201145318_create_some_tables.migration
 
@@ -47,6 +52,8 @@ SQL_DOWN = """
   DELETE FROM aleatory WHERE id = 1;
 """
 ```
+
+### Extra
 
 More and more information: [At creator repo, HERE!](https://github.com/guilhermechapiewski/simple-db-migrate)
 
